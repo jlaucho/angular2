@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Rutas
+import { app_routing } from './app.routes';
+//Servicios
+
+//Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/shared/navbar/navbar.component';
 import { HomeComponent } from './component/home/home.component';
@@ -16,7 +21,8 @@ import { HeroesComponent } from './component/heroes/heroes.component';
     HeroesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    app_routing
   ],
   providers: [],
   bootstrap: [AppComponent]
