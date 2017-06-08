@@ -34,3 +34,11 @@
 body{
   padding-bottom: 70px;
 }
+.logos{
+  width: 20%;
+  height: 100px;
+  border-radius: 10px;
+}
+.btn-outline-danger{
+  margin-top: 30px;
+}
