@@ -68,4 +68,18 @@ export class HeroesService {
     return this.heroes[index];
   }
 
+  buscarHeroes(texto:string){
+    texto = texto.toLowerCase();
+    let arrTemp = [];
+    for (let heroe of this.heroes) {
+        let nombre = heroe.bio.toLowerCase();
+        if( nombre.indexOf(texto) >= 0 ){
+          arrTemp.push(heroe);
+        }
+    }
+    //console.log(arrTemp);
+    return arrTemp;
+
+  }
+
 }

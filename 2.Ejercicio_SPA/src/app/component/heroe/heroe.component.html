@@ -1,4 +1,4 @@
-<h1> {{hero.nombre}} <small>Fecha de aparicion: {{ hero.aparicion }}</small></h1>
+<h1> {{hero.nombre  | uppercase}} <small>Fecha de aparicion: {{ hero.aparicion | date:'y'}}</small></h1>
 <hr>
 <div class="row">
   <div class="col-md-4 animated fadeIn fast">
