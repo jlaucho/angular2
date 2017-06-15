@@ -21,7 +21,7 @@
 
     </ul>
     <div class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" (keyup)="buscarHeroe(buscarTexto.value)" placeholder="Buscar" #buscarTexto >
+      <input class="form-control mr-sm-2" type="text" (keyup.enter)="buscarHeroe(buscarTexto.value)" placeholder="Buscar" #buscarTexto >
       <button class="btn btn-outline-primary my-2 my-sm-0" (click)="buscarHeroe(buscarTexto.value)" type="button">Buscar</button>
     </div>
   </div>

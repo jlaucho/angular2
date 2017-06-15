@@ -1,0 +1,96 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="container">
+
+  <div style="text-align:center">
+    <h1>Pipes</h1>
+  </div>
+  <hr>
+  <table class="table table-hover">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Variable</th>
+        <th>PIPES</th>
+        <th>Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th> {{ texto }}</th>
+        <td> uppercase </td>
+        <td> {{ texto | uppercase }} </td>
+      </tr>
+      <tr>
+        <th> {{ texto }}</th>
+        <td> lowercase </td>
+        <td> {{ texto | lowercase }} </td>
+      </tr>
+      <tr>
+        <th> {{ texto }}</th>
+        <td> slice:3 </td>
+        <td> {{ texto | slice:1:3 }} </td>
+      </tr>
+      <tr>
+        <th> {{ arreglo }}</th>
+        <td> slice:3 </td>
+        <td> {{ arreglo | slice:3 }} </td>
+      </tr>
+      <tr>
+        <th> {{ PI }}</th>
+        <td> number:'3.0-20' </td>
+        <td> {{ PI | number:'3.0-20' }} </td>
+      </tr>
+      <tr>
+        <th> {{ a }}</th>
+        <td> percent </td>
+        <td> {{ a | percent }} </td>
+      </tr>
+      <tr>
+        <th> {{ a }}</th>
+        <td> percent:'2.5-5' </td>
+        <td> {{ a | percent:'2.5-5' }} </td>
+      </tr>
+      <tr>
+        <th> {{ salario }}</th>
+        <td> currency </td>
+        <td> {{ salario | currency }} </td>
+      </tr>
+      <tr>
+        <th> {{ salario }}</th>
+        <td> currency:'VEF' </td>
+        <td> {{ salario | currency:'VEF' }} </td>
+      </tr>
+      <tr>
+        <th> {{ salario }}</th>
+        <td> currency:'EUR':true </td>
+        <td> {{ salario | currency:'EUR':true }} </td>
+      </tr>
+      <tr>
+        <th> {{ salario }}</th>
+        <td> currency:'EUR':true:'4.0-0' </td>
+        <td> {{ salario | currency:'EUR':true:'4.0-0' }} </td>
+      </tr>
+      <tr>
+        <th> {{ promesa }}</th>
+        <td> async </td>
+        <td> {{ promesa | async }} </td>
+      </tr>
+      <tr>
+        <th> {{ fecha }}</th>
+        <td> date </td>
+        <td> {{ fecha | date:'dd/MM/yy' }} </td>
+      </tr>
+      <tr>
+        <th> {{ fecha }}</th>
+        <td> date </td>
+        <td> {{ fecha | date:'medium' }} </td>
+      </tr>
+
+    </tbody>
+  </table>
+  <hr>
+  <h4>JSON</h4>
+  <pre>
+  {{ obj | json }}
+</pre>
+  <br><br><br><br><br><br><br><br>
+</div>
