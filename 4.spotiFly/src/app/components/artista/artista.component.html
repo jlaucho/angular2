@@ -1,0 +1,38 @@
+
+<div class="container separacion-top" *ngIf="artista">
+  <div class="row">
+    <div class="col-md-3">
+      <img [src]="artista.images[1].url" class="img-circle img-thumbnail" alt="image">
+    </div>
+    <div class="col-md-8" >
+      <h1 class="text-center separacion-top">{{ artista.name }} <small>Popularidad: {{ artista.popularity }}</small></h1>
+      <a [routerLink]="['/buscar']" class="btn btn-outline-success btn-block">Volver</a>
+      <a [routerLink]="artista.external_urls?.spotify" class="btn btn-outline-success btn-block">Visitar pagina en SpotiFly</a>
+    </div>
+  </div>
+    <h1 class="separacion-top">Top Tracks de <small>{{ artista.name }}</small></h1>
+    <hr>
+    <div class="" *ngFor="let track of pistas; let i = index" class="separacion-top">
+      <div class="row">
+        <div class="col-md-1">
+          {{ i + 1}}
+        </div>
+        <div class="col-md-2" >
+            <img class="pull-left" src="{{ track.album.images[2].url }}" alt="">
+        </div>
+        <div class="col-md-3">
+          <a [routerLink]="['home']" style="margin-top: 10px" class="btn btn-outline-info btn-block"> {{ track.name }} </a>
+        </div>
+        <div class="col-md-3">
+          <audio controls>
+            <source [src]="track.preview_url">
+              Tu Navegador es muy viejo !
+          </audio>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div style="margin-top: 120px">
+
+    </div>
+</div>
